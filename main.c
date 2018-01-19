@@ -20,6 +20,10 @@ data_stack_t* stack = init_stack();
   push(stack, &d);
   push(stack, &e);
 
+  pop(stack);
+
+  printStack(stack);
+
 
 
 

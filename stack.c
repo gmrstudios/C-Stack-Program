@@ -6,7 +6,7 @@
 int NoOfNodes = 0;
 
 /* INITIALIZE STACK */
-void *init_stack(){
+data_stack_t *init_stack(){
 
 data_stack_t *stack = malloc(sizeof(data_stack_t));
 
@@ -20,7 +20,7 @@ return stack;
 void push(data_stack_t* stack, void* data) {
 
 	// Declaring node
-	node_t *temp = malloc(1,sizeof(node_t));
+	node_t *temp = malloc(sizeof(node_t));
 
 	temp -> data = data;
 
@@ -33,7 +33,7 @@ void push(data_stack_t* stack, void* data) {
 		return;
 	}
 
-	temp -> next = HEAD;
+	temp -> next = stack -> HEAD;
   stack -> HEAD = temp;
 	stack -> size++;
 
@@ -71,7 +71,7 @@ void push(data_stack_t* stack, void* data) {
 
 	}
 
-void *printStack(data_stack_t* stack){
+void printStack(data_stack_t* stack){
 
 	if(stack -> size == 0)
 	{
@@ -89,10 +89,7 @@ void *printStack(data_stack_t* stack){
 
 		}
 
-	return;
-}
-
-
+  printf("\n");
 
 	return;
 }
